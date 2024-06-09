@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from flask import Flask, jsonify, request, abort, make_response
 
 app = Flask(__name__)
