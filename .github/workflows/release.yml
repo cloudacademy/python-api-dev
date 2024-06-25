@@ -22,7 +22,7 @@ jobs:
       - name: Package
         run: |
           echo packaging...
-          tar -czf python-api-dev-${{ env.RELEASE_VERSION }}.tar.gz api labfiles
+          tar -czf python-api-dev-${{ env.RELEASE_VERSION }}.tar.gz api labfiles Dockerfile
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
