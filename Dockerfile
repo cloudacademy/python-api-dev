@@ -5,6 +5,9 @@ COPY ./api /custom-app/api
 
 RUN pip3.10 install --no-cache-dir --upgrade -r /custom-app/api/requirements.txt
 
+RUN adduser --system --no-create-home nonroot
+USER nonroot
+
 EXPOSE 5000
 
 CMD ["python", "/custom-app/api/app2.py"]
